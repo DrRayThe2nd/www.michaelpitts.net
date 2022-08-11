@@ -1,0 +1,44 @@
+/* tag selectors */
+
+body {
+	font-family: Ubuntu, "times new roman", times, roman, serif;
+	font-size: 20px;
+}
+
+/* . class selectors */
+
+.menu-item {
+	color: black;
+	text-decoration: none;
+	padding: 5px 10px;
+}
+
+.menu-item:hover {
+	text-shadow: 0px 0px 5px white;
+}
+
+/* # id selectors */
+
+#menu {
+	padding: 5px 30px;
+	display: flex;
+	align-items: center;
+	background-color: #d66756;
+	color: black;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#name {
+	margin-right: auto;
+}
+
+#content {
+	padding-top: 20px;
+	max-width: 1000px;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	justify-content: center;
+}
