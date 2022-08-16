@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^michaelpitts.net [NC]
+
+RewriteRule ^(.*)$ http://www.michaelpitts.net/$1 [L,R=301]
