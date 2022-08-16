@@ -17,6 +17,14 @@ body {
 	text-shadow: 0px 0px 5px white;
 }
 
+.center {
+	margin:  auto;
+	max-width: 1000px;
+	width: 90%;
+	padding: 10px;
+	border: 3px solid seagreen;
+}
+
 /* # id selectors */
 
 #menu {
@@ -33,7 +41,7 @@ body {
 	margin-right: auto;
 }
 
-#content {
+#main-content {
 	padding-top: 20px;
 	max-width: 1000px;
 	width: 90%;
