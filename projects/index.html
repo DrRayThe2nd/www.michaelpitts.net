@@ -15,6 +15,15 @@
 			color: white;
 		}
 
+		a {
+			color: white;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-shadow: 0px 0px 5px #d66756;
+		}
+
 		/* . class selectors */
 
 		.menu-item {
@@ -25,6 +34,21 @@
 
 		.menu-item:hover {
 			text-shadow: 0px 0px 5px white;
+		}
+
+		.center {
+			margin:  auto;
+			max-width: 1000px;
+			width: 90%;
+			padding-top: 20px;
+		}
+
+		.project {
+			margin-left: 1em;
+		}
+
+		.description {
+			padding-left: 2em;
 		}
 
 		/* # id selectors */
@@ -42,6 +66,14 @@
 		#name {
 			margin-right: auto;
 		}
+
+		#example {
+			border-radius: 4%;
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			max-width: 80%;
+		}
 	</style>
 </head>
 <body>
@@ -51,6 +83,62 @@
 		<a class="menu-item" href="../about">About</a>
 		<a class="menu-item" href="../resume">Resume</a>
 		<a class="menu-item" href="../contact">Contact</a>
+	</div>
+	<div class="center">
+		<h2>Hardware Projects</h2>
+		<h3 class="project">Home Server</h3>
+		<p class="description">
+			Purpose: Network Attached Storage<br>
+			History: The CPU, motherboard, and case were free due to a power supply failure that the previous owner experienced.<br>
+			CPU: Intel i5-3330 @ stock 3.2 GHz<br>
+			RAM: 16 GB DDR3 @ stock 1600 MT/s<br>
+			Storage:<br>
+			&emsp;1x 512 GB SATA Western Digital SSD<br>
+			&emsp;3x 1 TB SATA 7200 RPM Western Digital HDD<br>
+			Software:<br>
+			&emsp;OS: Ubuntu 20.04 LTS<br>
+			&emsp;Redundnacy: 1x ZFS 0.8.3 pool in a RAID-Z1 configuration<br>
+			&emsp;Networking: Samba 4.13
+		</p>
+		<h3 class="project">Laptop</h3>
+		<p class="description">
+			Purpose: Fast, reliable daily driver laptop<br>
+			History: The laptop was purchased on sale and originally shipped with 8 GB of RAM and a 128 GB SATA SSD. It has been modified to accept USB PD power and to enable its previously absent S3 sleep state.<br>
+			CPU: AMD Ryzen 7 4700u @ stock 4.1 GHz<br>
+			RAM: 16 GB DDR4 @ stock 2667 MT/s<br>
+			Storage: 1x 1 TB NVMe Silicon Power SSD<br>
+			OS: Zorin OS Pro 16.1
+		</p>
+		<h3 class="project">Desktop</h3>
+		<p class="description">
+			Purpose: Affordable gaming computer<br>
+			History: The computer was built using off-the-shelf components.<br>
+			CPU: AMD Ryzen 3 3300X @ overclocked 4.3 GHz<br>
+			GPU: AMD RX 6600 8 GB @ stock 2.5 GHz core + 2.0 GHz memory<br>
+			RAM: 16 GB DDR4 @ stock 3600 MT/s<br>
+			Storage:<br>
+			&emsp;1x 512 GB NVMe Silicon Power SSD<br>
+			&emsp;1x 2 TB SATA 5400 RPM Seagate HDD<br>
+			OS: Windows 10 Pro
+		</p>
+		<h2>Software Projects</h2>
+		<h3 class="project">Numbers Reporter</h3>
+		<p class="description">
+			Purpose: Consolidates useful metrics<br>
+			Description: The Numbers Reporter software runs on an AWS cloud server every night at 11 PM ET. It logs into Chick-fil-A's corporate software and downloads Excel files containing hourly sales, hourly transactions, hourly speed-of-service, hourly labor, and year-to-date sales information for the current day. It takes this information and compiles it into a report highlighting positive and negative metrics and comparing the two shifts. It then sends the report out in a Telegram group containing all the managers of the franchise.<br>
+			Example from August 27th, 2022:
+		</p>
+		<img src="Example Numbers Report.png" id="example">
+		<h3 class="project"><a href="..">www.michaelpitts.net</a></h3>
+		<p class="description">
+			Purpose: Conveys information to prospective employers<br>
+			Description: <a href="..">www.michaelpitts.net</a> conveys information <a href="../about">about Michael Pitts</a>, <a href="../resume">his experience</a>, and <a href=".">his projects</a> to prospective employers, encouraging them to <a href="../contact">contact him</a> for an interview.
+		</p>
+		<h3 class="project">Laptop ACPI Tables</h3>
+		<p class="description">
+			Purpose: Allows the laptop to preserve battery life while not in use<br>
+			Description: Michael extracted, decompiled, modified, recompiled, and installed the ACPI tables for his laptop. A guide to do so yourself can be found <a href="https://nns.ee/blog/2020/10/18/acpi-patching.html">here</a>. After installation, the previously absent S3 sleep state is now accessible to the operating system.
+		</p>
 	</div>
 </body>
 </html>
